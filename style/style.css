@@ -1,0 +1,238 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+body {
+  margin: 0;
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+}
+html {
+  direction: rtl;
+}
+.layout {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  grid-template-areas:
+    "sidebar main"
+    "sidebar main"
+    "sidebar main";
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+p {
+  padding: 0;
+  margin: 0;
+  color: #4a5565;
+}
+ul {
+  list-style-type: none;
+  padding-right: 30px;
+}
+
+.sidebar {
+  overflow-y: auto;
+  grid-area: sidebar;
+}
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+.sidebar-logo .logo-img {
+  background-color: white;
+  margin-inline: 15px;
+  background-color: #2953f4;
+  padding: 12px 17px;
+  border-radius: 16px;
+  font-size: 25px;
+  color: white;
+}
+
+.nav-links ul li {
+  margin: 35px 0;
+}
+.nav-links ul li span {
+  font-weight: 600;
+}
+.nav-links ul li i {
+  margin-inline: 10px;
+  color: #4a5565;
+}
+.nav-links ul li span span {
+  color: #4a5565;
+}
+
+.nav-links .active-link {
+  background-color: #eff6ff;
+  width: 85%;
+  border-radius: 10px;
+  padding: 10px 0;
+  border: 1px solid #dbeafe;
+}
+.quick-actions p {
+  margin-right: 20px;
+}
+.active-link .active-link-span i {
+  color: #155dfc;
+}
+.active-link .active-link-span span {
+  color: #155dfc;
+}
+
+.quick-actions ul li {
+  margin: 35px 0;
+  cursor: pointer;
+}
+.quick-actions ul li span {
+  font-weight: 600;
+}
+.quick-actions ul li i {
+  margin-inline: 10px;
+  padding: 12px 12px;
+  border-radius: 8px;
+}
+.text-blue {
+  color: #2b7fff;
+  background-color: #dbe8fc;
+}
+.text-green {
+  color: #00c951;
+  background-color: #d5f3e1;
+}
+.text-purple {
+  color: #ad46ff;
+  background-color: #efe0fc;
+}
+.text-orange {
+  color: #f54a00;
+  background-color: #fce5d5;
+}
+
+.main {
+  background-color: #09c;
+  grid-area: main;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "grid-1 grid-1 grid-1 grid-1 grid-1 grid-1 grid-1 grid-1 grid-1"
+    "grid-2 grid-2 grid-2 grid-3 grid-3 grid-3 grid-4 grid-4 grid-4"
+    "grid-6 grid-6 grid-6 grid-5 grid-5 grid-5 grid-5 grid-5 grid-5"
+    "grid-7 grid-7 grid-7 grid-5 grid-5 grid-5 grid-5 grid-5 grid-5"
+    "grid-8 grid-8 grid-8 grid-9 grid-9 grid-9 grid-11 grid-11 grid-11"
+    "grid-8 grid-8 grid-8 grid-9 grid-9 grid-9 grid-11 grid-11 grid-11"
+    "grid-8 grid-8 grid-8 grid-10 grid-10 grid-10 grid-11 grid-11 grid-11"
+    "grid-8 grid-8 grid-8 grid-10 grid-10 grid-10 grid-11 grid-11 grid-11";
+}
+.grid-1 {
+  grid-area: grid-1;
+  /* background-color: #09c; */
+  
+}
+.grid-1  .container{
+  width: 95%;
+  margin: 20px auto;
+  border: 2px solid black;
+  display: flex;
+  justify-content: flex-start;
+  border-radius: 15px;
+  padding: 15px 15px;
+}
+.grid-1 .right-side {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  width: 75%;
+}
+.grid-1 .right-side .connect {
+  margin-top: 10px;
+  margin-right: 45px;
+  background-color: #f0fdf4;
+  padding: 5px;
+  border-radius: 15px;
+  width: 100px;
+}
+.connect .online {
+  color: #48d882;
+}
+.left-side {
+  display: flex;
+  align-items: center;
+}
+.left-side button {
+  height: 35px;
+  width: 35px;
+  border: 1px solid;
+  border-radius: 10px;
+  font-size: 15px;
+  margin-inline: 10px;
+}
+.left-side .notifications {
+  position: relative;
+}
+.left-side .notifications .noification-num {
+  color: white;
+  background-color: red;
+  border-radius: 50%;
+  padding: 0px 4px;
+  font-size: 13px;
+  font-weight: 500;
+  position: absolute;
+  right: 6px;
+  top: -8px;
+}
+
+.grid-2 {
+  grid-area: grid-2;
+  background-color: red;
+}
+.grid-3 {
+  grid-area: grid-3;
+  background-color: yellow;
+}
+.grid-4 {
+  grid-area: grid-4;
+  background-color: gray;
+}
+.grid-5 {
+  grid-area: grid-5;
+  background-color: green;
+}
+.grid-6 {
+  grid-area: grid-6;
+  background-color: teal;
+}
+.grid-7 {
+  grid-area: grid-7;
+  background-color: turquoise;
+}
+.grid-8 {
+  grid-area: grid-8;
+  background-color: goldenrod;
+}
+.grid-9 {
+  grid-area: grid-9;
+  background-color: blue;
+}
+.grid-10 {
+  grid-area: grid-10;
+  background-color: blueviolet;
+}
+.grid-11 {
+  grid-area: grid-11;
+  background-color: burlywood;
+}
